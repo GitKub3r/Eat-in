@@ -19,18 +19,19 @@ public class Loading extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Loading frame = new Loading();
-					frame.setVisible(true);
-					Thread.sleep(5000);
-					frame.setVisible(false);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		Loading frame = new Loading();
+		frame.setVisible(true);
+
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		frame.setVisible(false);
+		
+		
 	}
 
 	/**
@@ -64,6 +65,7 @@ public class Loading extends JFrame {
 		panel_2.add(lblLoad);
 		
 		setLocationRelativeTo(null);
+		setTitle("Cargando");
 
 	}
 
