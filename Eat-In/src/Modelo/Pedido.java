@@ -12,6 +12,38 @@ public class Pedido {
 		this.drink = drink;
 		this.price = price;
 	}
+
+	public String getBurger() {
+		return burger;
+	}
+
+	public void setBurger(String burger) {
+		this.burger = burger;
+	}
+
+	public String getFries() {
+		return fries;
+	}
+
+	public void setFries(String fries) {
+		this.fries = fries;
+	}
+
+	public String getDrink() {
+		return drink;
+	}
+
+	public void setDrink(String drink) {
+		this.drink = drink;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
 	
 	
 }
