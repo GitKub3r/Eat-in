@@ -1,6 +1,8 @@
 package Vista;
 
 import java.awt.EventQueue;
+import Controlador.MainClass;
+import Modelo.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,6 +23,10 @@ public class Window extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JTextField txtStreet;
+	private JTextField txtBuilding;
+	private JTextField txtFloor;
+	private JTextField txtDoor;
 
 	/**
 	 * Launch the application.
@@ -87,8 +93,44 @@ public class Window extends JFrame {
 		
 		JLabel lblCost = new JLabel("10.99 €");
 		lblCost.setFont(new Font("Tahoma", Font.BOLD, 15));
-		lblCost.setBounds(127, 162, 88, 14);
+		lblCost.setBounds(129, 86, 88, 14);
 		panel_3.add(lblCost);
+		
+		JLabel lblStreet = new JLabel("Calle");
+		lblStreet.setBounds(10, 103, 46, 14);
+		panel_3.add(lblStreet);
+		
+		txtStreet = new JTextField();
+		txtStreet.setBounds(10, 128, 144, 14);
+		panel_3.add(txtStreet);
+		txtStreet.setColumns(10);
+		
+		JLabel lblBuilding = new JLabel("Portal");
+		lblBuilding.setBounds(10, 153, 46, 14);
+		panel_3.add(lblBuilding);
+		
+		txtBuilding = new JTextField();
+		txtBuilding.setColumns(10);
+		txtBuilding.setBounds(10, 178, 144, 14);
+		panel_3.add(txtBuilding);
+		
+		JLabel lblPiso = new JLabel("Piso");
+		lblPiso.setBounds(171, 103, 46, 14);
+		panel_3.add(lblPiso);
+		
+		txtFloor = new JTextField();
+		txtFloor.setColumns(10);
+		txtFloor.setBounds(170, 128, 144, 14);
+		panel_3.add(txtFloor);
+		
+		JLabel lblDoor = new JLabel("Puerta");
+		lblDoor.setBounds(171, 153, 46, 14);
+		panel_3.add(lblDoor);
+		
+		txtDoor = new JTextField();
+		txtDoor.setColumns(10);
+		txtDoor.setBounds(170, 178, 144, 14);
+		panel_3.add(txtDoor);
 		
 		JPanel panel_4 = new JPanel();
 		contentPane.add(panel_4, BorderLayout.SOUTH);
@@ -96,8 +138,13 @@ public class Window extends JFrame {
 		JButton btnOrder = new JButton("Pedir");
 		btnOrder.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				MainClass controlador = new MainClass();
+				Pedido p = new Pedido("Whopper", "Patatas Fritas", "CocaCola (500ml)", 10.99);
+				Direccion d = new Direccion(txtStreet.getText(), txtBuilding.getText(), txtDoor.getText(), txtFloor.getText());
+				controlador.hacerPedido(p, d);
 			}
 		});
+		
 		panel_4.add(btnOrder);
 		
 		setLocationRelativeTo(null);

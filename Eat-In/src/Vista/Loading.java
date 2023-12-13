@@ -66,6 +66,8 @@ public class Loading extends JFrame {
 		
 		setLocationRelativeTo(null);
 		setTitle("Cargando");
+		
+		
 
 	}
 
