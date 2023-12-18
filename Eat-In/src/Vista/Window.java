@@ -36,7 +36,9 @@ public class Window extends JFrame {
 			public void run() {
 				try {
 					Window frame = new Window();
+					
 					frame.setVisible(true);
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -146,8 +148,5 @@ public class Window extends JFrame {
 		});
 		
 		panel_4.add(btnOrder);
-		
-		setLocationRelativeTo(null);
-		setTitle("Eat-In");
 	}
 }
