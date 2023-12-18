@@ -44,6 +44,4 @@ public class Pedido {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
-	
 }

@@ -44,7 +44,4 @@ public class Direccion {
 	public void setFloor(String floor) {
 		this.floor = floor;
 	}
-	
-	
-	
 }
