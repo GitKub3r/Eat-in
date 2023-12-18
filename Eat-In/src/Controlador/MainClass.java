@@ -14,6 +14,7 @@ public class MainClass {
 		load.main(args);
 		
 		Window window = new Window();
+		Look l = new Look(window);
 		window.setVisible(true);
 		
 		
